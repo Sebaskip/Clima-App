@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a; /* fondo azul oscuro general */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f1f5f9; /* texto claro global */
+}
+
+.container {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  width: 90%;           /* Cambiamos de fixed a relativo */
+  max-width: 400px;     /* Sigue funcionando bien en escritorio */
+  text-align: center;
+  border: 1px solid #cbd5e1;
+}
+
+
+.container h1 {
+  color: #38bdf8; /* azul cian brillante */
+  margin-bottom: 15px;
+}
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;        /* Permite que se bajen en pantallas pequeñas */
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1 1 100%;          /* Ocupa todo el ancho si no cabe */
+  padding: 10px;
+  background-color: #ffffff;
+  border: 2px solid #38bdf8;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+input[type="text"]::placeholder {
+  color: #94a3b8; /* gris claro */
+}
+
+button {
+  flex: 1 1 100%;          /* Botón también se adapta */
+  padding: 10px 15px;
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0ea5e9;
+}
+
+#resultado {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #1e293b; /* igual que container */
+  border-left: 5px solid #38bdf8;
+  border-radius: 8px;
+  font-size: 17px;
+  color: #f1f5f9;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#resultado h2 {
+  font-size: 22px;
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+
+#resultado img {
+  display: block;
+  margin: 12px auto;
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+#resultado p {
+  margin: 6px 0;
+  color: #e2e8f0;
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 20px 15px;
+  }
+
+  #resultado h2 {
+    font-size: 20px;
+  }
+
+  #resultado p {
+    font-size: 15px;
+  }
+
+  input[type="text"],
+  button {
+    font-size: 15px;
+  }
+
+  #resultado img {
+    width: 80px;
+  }
+}
+
