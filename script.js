@@ -47,22 +47,8 @@ formulario.addEventListener("submit", async (evento) => { // Submit se usa cuand
     <p><strong>Humedad:</strong> ${humedad}%</p>
     `; // innerHTML Es una forma rápida de inyectar HTML dinámico dentro de un elemento.
 
-    guardarCiudad(nombreCiudad);
-    
-    function guardarCiudad(ciudad) {
-      let historial = JSON.parse(localStorage.getItem("historial")) || [];
-      // Evita duplicados
-      if (!historial.includes(ciudad)) {
-        historial.unshift(ciudad); // Agrega al principio
-        if (historial.length > 5) historial.pop(); // Limita a 5 ciudades
-        localStorage.setItem("historial", JSON.stringify(historial));
-        mostrarHistorial();
-      }
-}
-
   } catch (error) {
     resultado.textContent = "Error: " + error.message;
   }
 });
-
 
